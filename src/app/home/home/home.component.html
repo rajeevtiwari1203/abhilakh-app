@@ -1,0 +1,36 @@
+<div class="container" *ngIf="(vm$ | async) as vm">
+    <div class="max-width-container">
+        <section class="caraousel">caraousel</section>
+        <section class="main-section">
+            <div class="header">{{vm.mainSection.header}}</div>
+            <div class="sub-header">{{vm.mainSection.subHeader}}</div>
+            <div class="images">
+                <div class="image" *ngFor="let item of vm.mainSection.images">
+                    <img [src]="item.imgSrc">
+                </div>
+            </div>
+        </section>
+        <section class="emergency-cases">
+            <div class="header">{{vm.emergencyCases.header}}</div>
+            <div class="images">
+                <div class="image" *ngFor="let item of vm.emergencyCases.images">
+                    <img [src]="item.imgSrc">
+                    <div class="short-detail">
+                        <div class="name">{{item.shortDetail.name}}</div>
+                        <div class="desease">{{item.shortDetail.desease}}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="full-width">
+        <section class="foundation-detail">
+            <div class="header">{{vm.foundationDetail.header}}</div>
+            <div class="details">
+                <div  *ngFor="let item of vm.foundationDetail.details" class="detail">
+                    {{item}}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

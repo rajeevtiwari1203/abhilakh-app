@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+@font-face {
+  font-family: "RobotoRegular";
+  src:url("/content/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoMedium";
+  src:url("/content/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src:url("/content/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src:url('/content/fonts/roboto/Roboto-Light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --text-color1: #333333;
+  --text-color2: #7a7a7a;
+  --text-color3: #BBBBBB;
+  --text-color4: #fff;
+  /*form*/
+  --link-color: #0063b1;
+  --textbox-border-color: #dcd7de;
+  --textbox-focus-color: #333333;
+  --textbox-icon-bg-color: #E3E3E3;
+  --textbox-icon-text-color: var(--text-color1);
+
+  /*Border Color*/
+  --border-color1: #DCD7DE;
+  /*dark color*/
+  --border-color2: #e3e3e3;
+  /*light color*/
+  --border-color3: #f3f3f3;
+  /*lighter color*/
+  --border-color4: #dcdcdc;
+  /*lighter color*/
+
+
+  /*Theme Color*/
+  --theme-color: #0063B1;
+  --compliment-color: #333333;
+  --page-bg-color: #F7F9FA;
+  --common-bg-color: #f5f5f5;
+  /*Common for mainNav and Breadcrumb*/
+  --icon-default-color: #777777;
+  --nav-bar-bgcolor: var(--theme-color);
+  --sub-nav-bar-hover-bgcolor: rgb(0, 99, 177, 0.7);
+
+  /*Primary Button*/
+  --btn1-bg-color: #1379d3;
+  --btn1-text-color: var(--text-color4);
+  --btn1-hover-color: #0262b5;
+
+  /*Secondary Button*/
+  --btn2-border-width: 1px;
+  --btn2-border-color: #DCD7DE;
+  --btn2-bg-color: #fff;
+  --btn2-text-color: #454545;
+  --btn2-hover-color: #EDEAEE;
+
+  /*Disabled Button*/
+  --btn-disabled-text-color: #C8C8C8;
+  --btn-disabled-bg-color: #F0F0F0;
+
+  /*Button4*/
+  --btn4-border-width: 1px;
+  --btn4-border-color: #dae3f8;
+  --btn4-bg-color: #eef2ff;
+  --btn4-text-color: var(--link-color);
+  --btn4-hover-color: #E7EEFF;
+
+  //font-family
+  --font-family-light: 'RobotoRegular';
+  --font-family-condensedlight: 'RobotoLight';
+  --font-family-regular: 'RobotoRegular';
+  --font-family-medium: 'RobotoMedium';
+  --font-family-bold: 'RobotoBold';
+
+  font-family: var(--font-family-regular);
+}
+
+@keyframes scaleanimation {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
