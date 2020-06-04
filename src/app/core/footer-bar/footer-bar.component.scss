@@ -1,0 +1,50 @@
+footer {
+  display: flex;
+  align-items: flex-start;
+  padding: 3vh 20px;
+  background-color: var(--theme-color);
+  color: var(--text-color4);
+}
+
+.first-half,
+.second-half {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  @media all and (min-width: 1047px) {
+	flex-direction: row;		
+	.link {
+		flex: 1 1 50%;
+	}
+  }
+  .link {
+	font-size: 0.8rem;
+	line-height: 1.4;
+	text-transform: capitalize;
+  }
+}
+
+.first-half {
+  display: flex;
+  flex-direction: column;
+  
+  .header {
+	font-size: 1.2rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+  }
+  .description {
+	font-size: 0.9rem;
+	line-height: 1.2;
+	margin-top: 1vh;
+  }
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: var(--text-color4);
+	text-decoration: none;
+}

@@ -7,31 +7,60 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width:10px;
+  background-color:transparent;
+  -webkit-border-radius:100px
+}
+::-webkit-scrollbar:hover {
+  background-color:rgba(0,0,0,.09)
+}
+::-webkit-scrollbar-thumb:vertical {
+  background:rgba(0,0,0,.5);
+  -webkit-border-radius:100px;
+  background-clip:padding-box;
+  border:2px solid transparent;
+  min-height:10px
+}
+::-webkit-scrollbar:horizontal {
+  height:10px
+} 
+::-webkit-scrollbar-thumb:horizontal {
+  background:rgba(0,0,0,.4);
+  -webkit-border-radius:100px;
+  background-clip:padding-box;
+  border:2px solid transparent;
+  max-height:10px
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background:rgba(0,0,0,.61)
+}
+
 
 @font-face {
   font-family: "RobotoRegular";
-  src:url("/content/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  src:url("/fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "RobotoMedium";
-  src:url("/content/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  src:url("/fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "RobotoBold";
-  src:url("/content/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src:url("/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'RobotoLight';
-  src:url('/content/fonts/roboto/Roboto-Light-webfont.ttf') format('truetype');
+  src:url('/fonts/roboto/Roboto-Light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -102,12 +131,22 @@
   font-family: var(--font-family-regular);
 }
 
-@keyframes scaleanimation {
+@keyframes scaleanimationY {
   0% {
     transform: scaleY(0);
   }
 
   100% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes scaleanimationXY {
+  0% {
+    transform: scaleX(0) scaleY(0);
+  }
+
+  100% {
+    transform: scaleX(1) scaleY(1);
   }
 }

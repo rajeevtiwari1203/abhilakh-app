@@ -1,0 +1,19 @@
+<div id="carousel" *ngIf="(totalSlideCurrentIndexCombined$ | async) as vm">
+    <div class="slides" [ngStyle]="{width: (vm.totalSlides*100 + '%')}">
+        <ng-container *ngFor="let item of arrVar(vm.totalSlides).fill(1); let i = index">
+            <ng-template
+                [ngTemplateOutlet]="caraouselItemTemplate"
+                [ngTemplateOutletContext]="{ index: i }"  >
+            </ng-template>
+        </ng-container>
+    </div>
+    <div class="dots" id="dots">
+        <span *ngFor="let item of arrVar(vm.totalSlides).fill(1); let i = index" class="dot" [attr.data-num]='i'></span>
+    </div>
+    <div class="left btn" id="leftBtn">
+        <img src="../../../assets/greater.svg" alt="" srcset="">
+    </div>
+    <div class="right btn" id="rightBtn">
+        <img src="../../../assets/greater.svg" alt="" srcset="">
+    </div>
+</div>

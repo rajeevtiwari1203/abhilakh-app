@@ -37,7 +37,7 @@ a {
     &:hover {
         .sub-menu {
             height: 120px;
-            animation: scaleanimation 200ms;
+            animation: scaleanimationY 200ms;
             transform-origin: top;
         }
     }
@@ -45,7 +45,7 @@ a {
 
 .sub-menu {
     display: flex;
-    top: 50px;
+    top: 60px;
     width: 180px;
     position: absolute;
     flex-direction: column;
@@ -61,6 +61,9 @@ a {
         &:hover {
             background-color: var(--sub-nav-bar-hover-bgcolor);
         }
+        &:nth-child(1) {
+            border-top: 2px solid var(--text-color4);
+        }
     }
 }
 
@@ -70,9 +73,47 @@ a {
     height: 100%;
     display: flex;
     align-items: center;
+    img {
+        width: 300px;
+        height: 40px;
+    }    
 }
 
-img {
-    width: 300px;
-    height: 40px;
+.small-device {
+    display: none;
+    @media all and (max-width: 1047px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        z-index: 1;
+        img {
+            width: 30px;    
+        }
+    }
+    .side-bar {
+        position: fixed;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        background-color: var(--nav-bar-bgcolor);
+        flex-direction: column;
+        &.sidebar-open {
+            width: 100vw;
+            height: 100vh;
+            animation: scaleanimationXY 200ms;
+            transform-origin: top right;
+        }
+    }
+}
+
+.big-device {
+    display: none;
+    @media all and (min-width: 1048px) {
+        display: flex;
+    }
 }

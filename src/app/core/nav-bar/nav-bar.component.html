@@ -1,5 +1,5 @@
 <div class="container">
-    <nav>
+    <nav class="big-device">
         <ul>
             <li><a [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="../../../assets/logo.png" alt="Logo"></a></li>
             <li><a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a></li>
@@ -13,5 +13,22 @@
             <li><a [routerLink]="['/galary']" routerLinkActive="router-link-active">Galary</a></li>
             <li><a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a></li>
         </ul>
+    </nav>
+    <nav class="small-device">
+        <ul>
+            <li><a [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="../../../assets/logo.png" alt="Logo"></a></li>
+        </ul>
+        <ul class="side-bar" [ngClass]="{'sidebar-open': sidebarOpen}" (click)="sidebarOpen = false;">
+            <li><a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a></li>
+            <li><a [routerLink]="['/about']">About Ngo</a></li>
+            <li><a [routerLink]="['/about/awards']">Awards</a></li>
+            <li><a [routerLink]="['/about/documents']">Ngo Documents</a></li>
+            <li><a [routerLink]="['/galary']" routerLinkActive="router-link-active">Galary</a></li>
+            <li><a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a></li>
+        </ul>
+        <i class="menu-icon" (click)="sidebarOpen = !sidebarOpen">
+            <img src="../../../assets/open-menu.svg" [hidden]="sidebarOpen">
+            <img src="../../../assets/close.svg" [hidden]="!sidebarOpen">
+        </i>
     </nav>
 </div>

@@ -1,6 +1,14 @@
 <div class="container" *ngIf="(vm$ | async) as vm">
+    <section class="caraousel-section">
+        <caraousel [totalSlides]="vm.caraouselData.length">
+            <ng-template let-idx="index" caraouselItemTemplate>
+                <div class="slide">
+                    <img [src]="vm.caraouselData[idx].imgSrc">
+                </div>
+            </ng-template>
+        </caraousel>
+    </section>
     <div class="max-width-container">
-        <section class="caraousel">caraousel</section>
         <section class="main-section">
             <div class="header">{{vm.mainSection.header}}</div>
             <div class="sub-header">{{vm.mainSection.subHeader}}</div>
@@ -27,7 +35,7 @@
         <section class="foundation-detail">
             <div class="header">{{vm.foundationDetail.header}}</div>
             <div class="details">
-                <div  *ngFor="let item of vm.foundationDetail.details" class="detail">
+                <div *ngFor="let item of vm.foundationDetail.details" class="detail">
                     {{item}}
                 </div>
             </div>
