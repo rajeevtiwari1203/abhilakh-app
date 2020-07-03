@@ -9,10 +9,9 @@ import { takeUntil } from 'rxjs/operators';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    console.log(this.activatedRoute.snapshot.data);
+export class AboutComponent {
+  data:any = {};
+  constructor(private activatedRoute: ActivatedRoute) { 
+    this.data = this.activatedRoute.snapshot.data.data;
   }
 }

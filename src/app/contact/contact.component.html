@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="form">
+        <div class="header">
+            GET IN TOUCH!
+        </div>
+        <form [formGroup]="contactForm">
+            <div class="input-text-group">
+                <input type="text" class="input-type-text" name="name" formControlName="name" #name>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+            <div class="input-text-group">
+                <input type="text" class="input-type-text" name="contact" formControlName="contact">
+                <span class="bar"></span>
+                <label>Contact</label>
+            </div>
+            <div class="input-text-group">
+                <input type="text" class="input-type-text" name="email" formControlName="email">
+                <span class="bar"></span>
+                <label>Email Address</label>
+            </div>
+            <!-- <div class="input-container">
+                <label for="message"></label>
+                <textarea type="text" name="message" formControlName="message"></textarea>
+            </div> -->
+            <button type="submit" id="loginBtn" name="loginBtn" class="bttn bttn-primary signInBtn">
+                <span class="btnText">CONTACT ME</span>
+                <span class="spinner hide"></span>
+            </button>
+        </form>
+    </div>
+    <div class="contact-details">
+        <div class="header">
+            ADDRESS
+        </div>
+    </div>
+</div>

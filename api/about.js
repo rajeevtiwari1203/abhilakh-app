@@ -2,12 +2,11 @@ var express = require("express");
 var router = express.Router();
 
 router.get('/', async function (req, res, next) {
-    let result = {recordset: [{}]};
     let result = {
         mainImage: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
         founderDetail: {
             imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
-            name: 'Nisha Malawat',
+            name: 'Rajeev Tiwari',
             about: 'She is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
         },
         whoWeAre: [

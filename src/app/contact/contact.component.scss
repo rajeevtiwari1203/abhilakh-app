@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .form {
+    flex-basis: 50%;
+    padding: 0 7%;
+  }
+
+  .contact-details {
+    flex-basis: 50%;
+    padding: 0 7%;
+  }
+
+  .header {
+    color: var(--text-color1);
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+
+  .input-text-group {
+    margin-bottom: 45px;
+    position: relative;
+    width: 100%;
+  }
+
+  .input-text-group .input-type-text {
+    font-size: 20px;
+    padding: 10px 10px 10px 5px;
+    height: 45px;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    color: var(--text-color1);
+    font-family: var(--font-family-regular);
+    border-bottom: 1px solid var(--textbox-border-color);
+  }
+
+  .input-text-group .input-type-text:focus {
+    outline: none;
+  }
+
+  .input-text-group label {
+    font-size: 20px;
+    left: 5px;
+    top: 10px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: var(--label-color);
+  }
+
+  .input-text-group .bar {
+    position: relative;
+    display: block;
+  }
+
+  .input-text-group .bar:before,
+  .input-text-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    transition: 0.2s ease all;
+    background: var(--focus-border-color);
+  }
+
+  .input-text-group .bar:before {
+    left: 50%;
+  }
+
+  .input-text-group .bar:after {
+    right: 50%;
+  }
+
+  .input-text-group .input-type-text:focus {
+    border-bottom-color: transparent;
+  }
+
+  .input-text-group .input-type-text:focus~.bar:before,
+  .input-text-group .input-type-text:focus~.bar:after {
+    width: 50%;
+  }
+
+  .input-text-group .input-type-text:focus~label,
+  .input-text-group .input-type-text:valid~label,
+  .input-text-group .input-type-text:-webkit-autofill~label {
+    top: -20px;
+    font-size: 16px;
+  }
+
+  .input-text-group .input-type-text:focus~label.errorInSignIn,
+  .input-text-group .input-type-text:valid~label.errorInSignIn,
+  .input-text-group .input-type-text:-webkit-autofill~label.errorInSignIn {
+    color: var(--error-color);
+  }
+
+  .input-text-group .input-type-text:focus~.bar.errorInSignIn:before,
+  .input-text-group .input-type-text:valid~.bar.errorInSignIn:before,
+  .input-text-group .input-type-text:-webkit-autofill~.bar.errorInSignIn:before,
+  .input-text-group .input-type-text:focus~.bar.errorInSignIn:after,
+  .input-text-group .input-type-text:valid~.bar.errorInSignIn:after,
+  .input-text-group .input-type-text:-webkit-autofill~.bar.errorInSignIn:after {
+    background: var(--error-color);
+    width: 50%;
+  }
+
+  .input-text-group .input-type-text:focus~label {
+    color: var(--focus-border-color);
+  }
+
+  .input-text-group .input-type-text:not(:focus)~label {
+    color: var(--label-color);
+  }
+
+  #loginBtn {
+    height: 60px;
+    line-height: 20px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-family: var(--font-family-medium);
+    text-transform: capitalize;
+    text-align: center;
+    box-shadow: none;
+    width: 100%;
+    background: var(--login-btn-bg-color);
+    color: var(--login-btn-font-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-width: 0;
+    cursor: pointer;
+    transition: background-color 300ms;
+  }
+
+  #loginBtn.disabled {
+    cursor: not-allowed;
+  }
+
+  #loginBtn:hover {
+    background: var(--login-btn-hover-bg-color);
+  }
+
+  #loginBtn .spinner {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-top: 2px solid var(--login-btn-bg-color);
+    border-radius: 50%;
+    margin-left: 10px;
+    animation: spin 2s linear infinite;
+    &.hide {
+        display: none;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

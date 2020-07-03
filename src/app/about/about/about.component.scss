@@ -1,5 +1,9 @@
 .image {
     height: 50vh;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .founder-detail {
@@ -8,4 +12,58 @@
     background-position: 0 0;
     background-attachment: fixed;
     background-color: var(--fixed-bg-color);
+    padding: 10vh 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color4);
+    .founder-img {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 25px;
+        .img-container {
+            width: 100px;
+            height: 120px;
+            border: 4px solid #fff;
+            border-radius: 8px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .founder-name {
+            font-size: 15px;
+            margin: 0 4px;
+        }
+        .designation {
+            font-size: 11px;
+        }
+    }
+    .detail {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+.section {
+    margin-bottom: 100px;
+    margin: 40px 50px;
+    .header {
+        font-size: 16px;
+        color: var(--text-color1);
+        margin-bottom: 10px;
+        span {
+            color: var(--fixed-bg-color);
+            padding-left: 2px;
+        }
+    }
+    .detail {
+        font-size: 14px;
+        color: var(--text-color2);
+        .detail-line {
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+    }
 }
