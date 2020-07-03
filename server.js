@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 
 const homeRouter = require('./api/home');
+const aboutRouter = require('./api/about');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -12,6 +13,7 @@ app.use(express.static(__dirname + '/dist/'));
 // Send all requests to index.html
 
 app.use('/api/home', homeRouter);
+app.use('/api/about', aboutRouter);
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });

@@ -115,7 +115,11 @@
 }
 
 .foundation-detail {
-  background-color: #5f5d5d;
+  background-image: url('../../../assets/pattern2.png');
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-color: var(--fixed-bg-color);
   padding: 10vh 20px;
 
   .header {
