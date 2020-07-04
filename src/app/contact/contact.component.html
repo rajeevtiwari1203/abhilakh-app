@@ -5,25 +5,50 @@
         </div>
         <form [formGroup]="contactForm">
             <div class="input-text-group">
-                <input type="text" class="input-type-text" name="name" formControlName="name" #name>
-                <span class="bar"></span>
-                <label>Name</label>
+                <input type="text" 
+                        class="input-type-text" 
+                        name="name" 
+                        formControlName="name" 
+                        #name 
+                        required
+                        [ngClass]="{'errorInSignIn': contactForm?.controls['name'].touched && !contactForm?.controls['name'].valid}">
+                <span class="bar"
+                    [ngClass]="{'errorInSignIn': contactForm?.controls['name'].touched && !contactForm?.controls['name'].valid}">
+                </span>
+                <label [ngClass]="{'errorInSignIn': contactForm?.controls['name'].touched && !contactForm?.controls['name'].valid}">
+                    Name
+                </label>
             </div>
             <div class="input-text-group">
-                <input type="text" class="input-type-text" name="contact" formControlName="contact">
-                <span class="bar"></span>
-                <label>Contact</label>
+                <input type="text" 
+                        class="input-type-text" 
+                        name="contact" 
+                        formControlName="contact"
+                        #contact
+                        required
+                        [ngClass]="{'errorInSignIn': contactForm?.controls['contact'].touched && !contactForm?.controls['contact'].valid}">
+                <span class="bar"
+                    [ngClass]="{'errorInSignIn': contactForm?.controls['contact'].touched && !contactForm?.controls['contact'].valid}">
+                </span>
+                <label [ngClass]="{'errorInSignIn': contactForm?.controls['contact'].touched && !contactForm?.controls['contact'].valid}">Contact</label>
             </div>
             <div class="input-text-group">
-                <input type="text" class="input-type-text" name="email" formControlName="email">
-                <span class="bar"></span>
-                <label>Email Address</label>
+                <input type="text" 
+                    class="input-type-text" 
+                    name="email" 
+                    formControlName="email" 
+                    required
+                    #email
+                    [ngClass]="{'errorInSignIn': contactForm?.controls['email'].touched && !contactForm?.controls['email'].valid}">
+                <span class="bar"
+                [ngClass]="{'errorInSignIn': contactForm?.controls['email'].touched && !contactForm?.controls['email'].valid}"></span>
+                <label [ngClass]="{'errorInSignIn': contactForm?.controls['email'].touched && !contactForm?.controls['email'].valid}">Email Address</label>
             </div>
             <!-- <div class="input-container">
                 <label for="message"></label>
                 <textarea type="text" name="message" formControlName="message"></textarea>
             </div> -->
-            <button type="submit" id="loginBtn" name="loginBtn" class="bttn bttn-primary signInBtn">
+            <button type="submit" id="loginBtn" name="loginBtn" class="bttn bttn-primary signInBtn" (click)="submit()">
                 <span class="btnText">CONTACT ME</span>
                 <span class="spinner hide"></span>
             </button>
@@ -32,6 +57,26 @@
     <div class="contact-details">
         <div class="header">
             ADDRESS
+        </div>
+        <div class="contact">
+            <div class="header header2">OFFICE:</div>
+            <div class=" line line-1">
+                Abhilasha Foundation
+            </div>
+            <div class="line line-2">
+                Laxmi Chhaya Bungalow, Plot no: 27-27, RSC 11,
+            </div>
+            <div class="line line-3">
+                Gorai-2, Borivali(W), Mumbai-400 091.
+            </div>
+        </div>
+        <div class="contact">
+            <div class="header header2">PHONE NO.:</div>
+            +91-8928612314
+        </div>
+        <div class="contact">
+            <div class="header header2">EMAIL:</div>
+            <a mailTo="a.k@gmail.com">a.k@gmail.com</a>
         </div>
     </div>
 </div>

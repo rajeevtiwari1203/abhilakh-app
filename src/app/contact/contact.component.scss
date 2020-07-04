@@ -13,10 +13,23 @@
     padding: 0 7%;
   }
 
+  .contact {
+    font-size: 13px;
+    .line {
+        line-height: 1.2;
+    }
+    margin-bottom: 30px;
+  }
+
   .header {
     color: var(--text-color1);
+    font-family: var(--font-family-medium);
     font-size: 16px;
     margin-bottom: 50px;
+    &.header2 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
   }
 
 
