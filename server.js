@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/dist/'));
 // Send all requests to index.html
 
 app.use('/api/home', homeRouter);
-//app.use('/api/about', aboutRouter);
+app.use('/api/about', aboutRouter);
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });

@@ -17,7 +17,6 @@ router.get('/', async function (req, res, next) {
         ourMission: ['Plan and implement or join hands with government, donors, non-government and other volunteering bodies for implementing, development that fulfill our vision to educate, organize, strengthen the downtrodden communities with total capacities to manage their own development.'],
         ourObjectives: ['We believe in “Converts desires into reality……”, Abhilasha Foundation’s honest objective is to be there in all welfare and uplift activities wherever and whenever society needs. Our foundation is to identify and fulfill the society’s basic needs.']
     }
-    let result = "";
     try {
         res.send(result);
     } catch (e) {
