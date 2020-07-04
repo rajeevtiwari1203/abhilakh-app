@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'contact',
@@ -7,11 +8,14 @@ import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms'
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  data;
   contactForm: FormGroup;
   @ViewChild('name') name: ElementRef;
   @ViewChild('contact') contact: ElementRef;
   @ViewChild('email') email: ElementRef;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private activatedRoute: ActivatedRoute) { 
+    this.data = this.activatedRoute.snapshot.data.data;
+  }
 
   ngOnInit(): void {
     let emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

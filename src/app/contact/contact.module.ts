@@ -4,11 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { ContactResolverService } from './contact-resolver.service';
+import { ContactService } from './contact.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: ContactComponent
+    component: ContactComponent,
+    resolve: {data: ContactResolverService}
   }
 ];
 
@@ -19,6 +22,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     SharedModule,
     [RouterModule.forChild(routes)],
-  ]
+  ],
+  providers: [ContactService, ContactResolverService]
 })
 export class ContactModule { }

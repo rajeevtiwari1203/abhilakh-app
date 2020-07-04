@@ -61,22 +61,22 @@
         <div class="contact">
             <div class="header header2">OFFICE:</div>
             <div class=" line line-1">
-                Abhilasha Foundation
+                {{data.address.line1}}
             </div>
             <div class="line line-2">
-                Laxmi Chhaya Bungalow, Plot no: 27-27, RSC 11,
+                {{data.address.line2}}
             </div>
             <div class="line line-3">
-                Gorai-2, Borivali(W), Mumbai-400 091.
+                {{data.address.line3}}
             </div>
         </div>
         <div class="contact">
             <div class="header header2">PHONE NO.:</div>
-            +91-8928612314
+            {{data.contact?.phone}}
         </div>
         <div class="contact">
             <div class="header header2">EMAIL:</div>
-            <a mailTo="a.k@gmail.com">a.k@gmail.com</a>
+            <a href = "mailto: {{data.contact?.email}}">{{data.contact?.email}}</a>
         </div>
     </div>
 </div>
