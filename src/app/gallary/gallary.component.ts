@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GallaryService } from './gallary.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'gallary',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GallaryComponent implements OnInit {
 
-  constructor() { }
-
+  vm$;
+  constructor(private gallaryService: GallaryService) { }
   ngOnInit(): void {
+    this.vm$ = this.gallaryService.getGallaryData().pipe(tap(m => console.log(m)));
   }
 
 }

@@ -24,6 +24,10 @@ const coreRoutes: Routes = [
 			{
 				path: 'contact',
 				loadChildren: () => import('../contact/contact.module').then(m => m.ContactModule)
+			},
+			{
+				path: 'gallary',
+				loadChildren: () => import('../gallary/gallary.module').then(m => m.GallaryModule)
 			}
 		]
 	}
