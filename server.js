@@ -4,7 +4,7 @@ const app = express();
 
 const homeRouter = require('./api/home');
 const aboutRouter = require('./api/about');
-const aboutRouter = require('./api/contact');
+const contactRouter = require('./api/contact');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
