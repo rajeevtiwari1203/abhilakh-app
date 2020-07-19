@@ -5,6 +5,7 @@ const app = express();
 const homeRouter = require('./api/home');
 const aboutRouter = require('./api/about');
 const contactRouter = require('./api/contact');
+const gallaryRouter = require('./api/gallary');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -15,7 +16,8 @@ app.use(express.static(__dirname + '/dist/'));
 
 app.use('/api/home', homeRouter);
 app.use('/api/about', aboutRouter);
-app.use('/api/about', contactRouter);
+app.use('/api/contact', contactRouter);
+app.use('/api/gallary', gallaryRouter);
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });

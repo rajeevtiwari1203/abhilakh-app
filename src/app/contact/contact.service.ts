@@ -7,6 +7,6 @@ export class ContactService {
     constructor(private httpClient: HttpClient) { }
 
     getContactData() {
-        return this.httpClient.get('/api/about');
+        return this.httpClient.get('/api/contact');
     }
 }
