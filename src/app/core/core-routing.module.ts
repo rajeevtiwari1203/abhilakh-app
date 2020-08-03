@@ -28,6 +28,10 @@ const coreRoutes: Routes = [
 			{
 				path: 'gallary',
 				loadChildren: () => import('../gallary/gallary.module').then(m => m.GallaryModule)
+			},
+			{
+				path: 'admin',
+				loadChildren: () => import('../admin/admin.module').then(m => m.AdminModule)
 			}
 		]
 	}

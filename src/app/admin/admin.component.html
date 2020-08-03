@@ -1,0 +1,185 @@
+<form class="main-form" [formGroup]="mainForm">
+    <section class="form-section">
+        <label for="screen">Screen Name</label>
+        <select name="screen" class="form-control" id="screen" formControlName="screen"
+            (change)="onScreenChange($event)">
+            <option value="home">Home</option>
+            <option value="about">About</option>
+            <option value="gallary">Gallary</option>
+            <option value="contact">Contact</option>
+        </select>
+    </section>
+    <ng-container [ngSwitch]="screenName$ | async">
+        <form class="group" *ngSwitchCase="'home'" [formGroup]="homeForm">
+            <section class="form-section">
+                <label for="caraouselImages">Caraousel Images</label>
+                <input type="file" accept="image/*" name="caraouselImages" id="caraouselImages" class="form-control" multiple
+                    (change)="onImagesChange($event, 'caraouselImageSources')">
+            </section>
+
+            <section class="form-section">
+                <label for="mainSectionHeader">Main Section Header</label>
+                <input type="text" name="mainSectionHeader" id="mainSectionHeader" class="form-control"
+                    formControlName="mainSectionHeader">
+            </section>
+            <section class="form-section">
+                <label for="mainSectionSubHeader">Main Section Sub Header</label>
+                <input type="text" name="mainSectionSubHeader" id="mainSectionSubHeader" class="form-control"
+                    formControlName="mainSectionSubHeader">
+            </section>
+            <section class="form-section">
+                <label for="mainSectionImages">Main Section Images</label>
+                <input type="file" accept="image/*" name="mainSectionImages" id="mainSectionImages" class="form-control" multiple
+                    (change)="onImagesChange($event, 'mainSectionImageSources')">
+            </section>
+
+            <section class="form-section">
+                <label for="emergencySectionHeader">Emergency Section Header</label>
+                <input type="text" name="emergencySectionHeader" id="emergencySectionHeader" class="form-control"
+                    formControlName="emergencySectionHeader">
+            </section>
+            <section class="form-section">
+                <label>Emergency Section Images</label>
+                <ng-container formArrayName="emergencyImages">
+                    <ng-container *ngFor="let item of emergencyImages.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="file" accept="image/*" class="form-control" (change)="onImageChange($event, 'imageSource', i)">
+                            <input type="text" formControlName="name" placeholder="patient  {{i + 1}} name"
+                                class="form-control">
+                            <input type="text" formControlName="desease" placeholder="patient {{i + 1}} deseasename"
+                                class="form-control">
+                            <span class="link" (click)="removeEmergencyCases(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewEmergencyItem()">Add More</span>
+            </section>
+            <section class="form-section">
+                <label for="foundationDetailHeader">Foundation Detail Section Header</label>
+                <input type="text" name="foundationDetailHeader" id="foundationDetailHeader" class="form-control"
+                    formControlName="foundationDetailHeader">
+            </section>
+            <section class="form-section">
+                <label>Foundation Detail Section Lines</label>
+                <ng-container formArrayName="foundationDetails">
+                    <ng-container *ngFor="let item of foundationDetails.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="line" placeholder="Line {{i + 1}}" class="form-control">
+                            <span class="link" (click)="removeFoundationDetails(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewFoundationDetailLine()">Add More</span>
+            </section>
+
+        </form>
+        <form class="group" *ngSwitchCase="'about'" [formGroup]="aboutForm">
+            <section class="form-section">
+                <label for="mainImage">Main Image</label>
+                <input type="file" accept="image/*" class="form-control" id="mainImage" (change)="onAboutImageChange($event, 'mainImageSource')">
+            </section>
+
+            <section class="form-section">
+                <label for="founderImage">Founder Details</label>
+                <div class="form-control-group">
+                    <input type="file" accept="image/*" class="form-control" id="founderImage" (change)="onAboutImageChange($event, 'founderImageSource')">
+                    <input type="text" formControlName="founderName" placeholder="Founder Name" class="form-control">
+                    <input type="text" formControlName="founderAbout" placeholder="Founder About" class="form-control">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <label>Who we are Lines</label>
+                <ng-container formArrayName="whoWeAre">
+                    <ng-container *ngFor="let item of whoWeAre.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="line" placeholder="Line {{i + 1}}" class="form-control">
+                            <span class="link" (click)="removeWhoWeAreLine(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewWhoWeAreItem()">Add More</span>
+            </section>
+            <section class="form-section">
+                <label>Our Vision</label>
+                <ng-container formArrayName="ourVision">
+                    <ng-container *ngFor="let item of ourVision.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="line" placeholder="Line {{i + 1}}" class="form-control">
+                            <span class="link" (click)="removeOurVisionLine(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewOurVisionItem()">Add More</span>
+            </section>
+            <section class="form-section">
+                <label>Our Mission</label>
+                <ng-container formArrayName="ourMission">
+                    <ng-container *ngFor="let item of ourMission.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="line" placeholder="Line {{i + 1}}" class="form-control">
+                            <span class="link" (click)="removeOurMissionLine(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewOurMissionItem()">Add More</span>
+            </section>
+            
+            <section class="form-section">
+                <label>Our Objectives</label>
+                <ng-container formArrayName="ourObjectives">
+                    <ng-container *ngFor="let item of ourObjectives.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="line" placeholder="Line {{i + 1}}" class="form-control">
+                            <span class="link" (click)="removeOurObjectiveLine(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewOurObjectivesItem()">Add More</span>
+            </section>
+        </form>
+        <form class="group" *ngSwitchCase="'gallary'" [formGroup]="gallaryForm">
+            <section class="form-section">
+                <label>Gallary Images</label>
+                <ng-container formArrayName="gallaryImages">
+                    <ng-container *ngFor="let item of gallaryImages.controls; let i = index;">
+                        <div class="form-control-group" [formGroupName]="i">
+                            <input type="text" formControlName="imageHeader" placeholder="Image {{i + 1}} Header"
+                                class="form-control">
+                            <input type="file" accept="image/*" class="form-control" multiple
+                                (change)="onGallaryImagesChange($event, i)">
+                            <span class="link" (click)="removeGallaryDetails(i)">Remove</span>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <span class="link mb-20" (click)="addNewGallaryItem()">Add More</span>
+            </section>
+
+        </form>
+        <form class="group" *ngSwitchCase="'contact'" [formGroup]="contactForm">
+            <section class="form-section">
+                <label for="line1">Office Addres Line 1</label>
+                <input type="text" name="line1" class="form-control" id="line1" formControlName="line1">
+            </section>
+            <section class="form-section">
+                <label for="line2">Office Addres Line 2</label>
+                <input type="text" name="line2" class="form-control" id="line2" formControlName="line2">
+            </section>
+            <section class="form-section">
+                <label for="line3">Office Addres Line 3</label>
+                <input type="text" name="line3" class="form-control" id="line3" formControlName="line3">
+            </section>
+            <section class="form-section">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" class="form-control" id="phone" formControlName="phone">
+            </section>
+            <section class="form-section">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="email" formControlName="email">
+            </section>
+        </form>
+    </ng-container>
+    <button class="submit" type="submit" (click)="submitForm()">
+        Submit
+    </button>
+</form>
