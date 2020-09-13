@@ -69,7 +69,7 @@ router.get('/', async function (req, res, next) {
         ],
         mainSection: {
             header: 'Join The Fight Against Corona Virus Pandemic COVID – 19 – RELIEF -- RATION DISTRIBUTION TO DAILY WAGE WORKERS',
-            subHeader: 'Erase the hunger and nourish the poor & the needy….. donate a ration kit During the COVID – 19 Pandemic Abhilasha Foundation has initiated the process of relief work (dry ration food grains distribution) in many parts of Mumbai, Thane & Navi Mumbai to the daily wager, migrant workers, auto rickshaw drivers, tribals, poor, needy, physically challenged people and children. Extend a helping hand to the less privileged & join us in this initiative. You can see the ration distribution photographs in Facebook, Linkedin, Twitter & Gallery.',
+            subHeader: 'Erase the hunger and nourish the poor & the needy….. donate a ration kit During the COVID – 19 Pandemic Abhilakh Foundation has initiated the process of relief work (dry ration food grains distribution) in many parts of Uttar Pradesh and Delhi to the daily wager, migrant workers, auto rickshaw drivers, tribals, poor, needy, physically challenged people and children. Extend a helping hand to the less privileged & join us in this initiative. You can see the ration distribution photographs in Facebook, Linkedin, Twitter & Gallery.',
             images: [
                 {
                     imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg'
@@ -162,10 +162,10 @@ router.get('/', async function (req, res, next) {
             ]
         },
         foundationDetail: {
-            header: 'Welcome to Abhilasha Foundation',
+            header: 'Welcome to Abhilakh Foundation',
             details: [
-                'Abhilasha Foundation is a non-profit NGO established under Society Registration Act, 1860 and The Bombay Public Trust Act, 1950, Abhilasha Foundation is a organization benefitting underprivileged children and their families through various projects on healthcare, education, nutrition, shelter, livelihood, women empowerment, child protection, and other social issues.',
-                'Abhilasha Foundation works with the society to create positive transformation. Since its inception, the organization has worked to empower vulnerable sections of society, with a particular emphasis on children and women, by providing them with the opportunity to lead a life of dignity and freedom.'
+                'Abhilakh Foundation is a non-profit NGO established under Society Registration Act, 1860 and The Uttar Pradesh Public Trust Act, 1950, Abhilakh Foundation is a organization benefitting underprivileged children and poor as well as their families through various projects on healthcare, education, nutrition, shelter, livelihood, women empowerment, child protection, and other social issues.',
+                'Abhilakh Foundation works with the society to create positive transformation. Since its inception, the organization has worked to empower vulnerable sections of society, with a particular emphasis on children and women, by providing them with the opportunity to lead a life of dignity and freedom.'
             ]
         }
     }
