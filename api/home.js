@@ -7,7 +7,7 @@ router.get('/', async function (req, res, next) {
     let result = {
         caraouselData: [
             {
-                imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0Bkq4BlmDylg-3UJYCa4W07Q6mfrJza8yvA&usqp=CAU',
                 text1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s",
                 text2: 'It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old',
                 text3: 'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below',
@@ -68,7 +68,7 @@ router.get('/', async function (req, res, next) {
             }
         ],
         mainSection: {
-            header: 'Join The Fight Against Corona Virus Pandemic COVID – 19 – RELIEF -- ‘’RATION DISTRIBUTION TO DAILY WAGE WORKERS”',
+            header: 'Join The Fight Against Corona Virus Pandemic COVID – 19 – RELIEF -- RATION DISTRIBUTION TO DAILY WAGE WORKERS',
             subHeader: 'Erase the hunger and nourish the poor & the needy….. donate a ration kit During the COVID – 19 Pandemic Abhilasha Foundation has initiated the process of relief work (dry ration food grains distribution) in many parts of Mumbai, Thane & Navi Mumbai to the daily wager, migrant workers, auto rickshaw drivers, tribals, poor, needy, physically challenged people and children. Extend a helping hand to the less privileged & join us in this initiative. You can see the ration distribution photographs in Facebook, Linkedin, Twitter & Gallery.',
             images: [
                 {
