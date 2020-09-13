@@ -7,6 +7,6 @@ export class AboutService {
     constructor(private httpClient: HttpClient) { }
 
     getAboutNgoData() {
-        return this.httpClient.get('/api/about');
-    }   
+      return this.httpClient.get('/api/about');
+    }
 }

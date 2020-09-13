@@ -1,14 +1,21 @@
 var express = require("express");
 var router = express.Router();
+var cloudinary = require('cloudinary').v2;
 
 router.get('/', async function (req, res, next) {
     let result = {
         mainImage: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
-        founderDetail: {
+        founderDetail: [{
             imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
             name: 'Rajeev Tiwari',
-            about: 'She is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
-        },
+            designation: 'Founder',
+            about: 'He is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
+        },{
+            imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+            name: 'XYZ',
+            designation: 'President',
+            about: 'He is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
+        }],
         whoWeAre: [
             'Abhilasha Foundation is a non-profit NGO established under society Registration Act, 1860 (Registration No: GBBSD / 964 / 2014) and The Bombay Public Trust Act. 1950. (Registration No: F-58645).',
             'Abhilasha Foundation works among migrants, poor and abused women, neglected children, senior citizens, school drop outs, Self Help Groups, and awareness on various social, health and current issues. The underprivileged need to be given the appropriate opportunities and they need to be motivated. Abhilasha Foundation works with a view to help the poor community through various welfare activities.'
@@ -27,9 +34,10 @@ router.get('/', async function (req, res, next) {
 
 // /* POST candidate creation. */
 router.post('/create', async function (req, res, next) {
-    //let candidateDb = new CandidateDb();
-    let result = { recordset: [{}] };
+    // let result = { recordset: [{}] };
     try {
+        //cloudinary.uploader.upload("my_image.jpg", function(error, result) {console.log(result, error)});
+        console.log(req.body);
         //result = await candidateDb.addUpdateCandidate(req.body);
         //res.send(result.recordset[0]);
         res.send('hey');

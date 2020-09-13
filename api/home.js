@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var cloudinary = require('cloudinary').v2;
 
 router.get('/', async function (req, res, next) {
     //let result = {recordset: [{}]};
@@ -180,9 +181,10 @@ router.get('/', async function (req, res, next) {
 
 // /* POST candidate creation. */
 router.post('/create', async function (req, res, next) {
-    //let candidateDb = new CandidateDb();
-    let result = { recordset: [{}] };
+    // let result = { recordset: [{}] };
     try {
+        //cloudinary.uploader.upload("my_image.jpg", function(error, result) {console.log(result, error)});
+        console.log(req.body);
         //result = await candidateDb.addUpdateCandidate(req.body);
         //res.send(result.recordset[0]);
         res.send('hey');

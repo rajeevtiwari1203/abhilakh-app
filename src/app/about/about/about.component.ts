@@ -11,7 +11,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class AboutComponent {
   data:any = {};
-  constructor(private activatedRoute: ActivatedRoute) { 
+  constructor(private activatedRoute: ActivatedRoute) {
     this.data = this.activatedRoute.snapshot.data.data;
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { NgSwitch } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'admin',
@@ -15,7 +16,7 @@ export class AdminComponent implements OnInit {
   homeForm: FormGroup;
   gallaryForm: FormGroup;
   aboutForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.mainForm = this.fb.group({
@@ -294,6 +295,7 @@ export class AdminComponent implements OnInit {
             }
           }
           console.log(data);
+          this.httpClient.post('/api/home/create', data).subscribe(m=> console.log(m));
         }
         break;
 
@@ -306,6 +308,7 @@ export class AdminComponent implements OnInit {
             }
           })
           console.log(data);
+          this.httpClient.post('/api/gallary/create', data).subscribe(m=> console.log(m));
         }
         break;
 
@@ -325,6 +328,7 @@ export class AdminComponent implements OnInit {
             ourObjectives: this.ourObjectives.controls.map(m => m.get('line').value)
           };
           console.log(data);
+          this.httpClient.post('/api/about/create', data).subscribe(m=> console.log(m));
         }
         break;
 
@@ -342,6 +346,7 @@ export class AdminComponent implements OnInit {
             }
           }
           console.log(data);
+          this.httpClient.post('/api/contact/create', data).subscribe(m=> console.log(m));
         }
         break;
 

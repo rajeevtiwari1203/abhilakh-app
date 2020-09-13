@@ -2,20 +2,20 @@
     <div class="image">
         <img [src]="data.mainImage" alt="background image">
     </div>
-    <div class="founder-detail">
+    <div *ngFor="let item of data.founderDetail" class="founder-detail">
         <div class="founder-img">
             <div class="img-container">
-                <img [src]="data.founderDetail?.imgSrc" alt="Founder Image">
+                <img [src]="item?.imgSrc" alt="Founder Image">
             </div>
             <div class="founder-name">
-                {{data.founderDetail?.name}},
+                {{item?.name}},
             </div>
             <div class="designation">
-                Founder and President
+                {{item.designation}}
             </div>
         </div>
         <div class="detail">
-            {{data.founderDetail?.about}}
+            {{item?.about}}
         </div>
     </div>
     <div class="section">
