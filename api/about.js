@@ -9,12 +9,12 @@ router.get('/', async function (req, res, next) {
             imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1600276956/My_Pic_zp9jul.jpg',
             name: 'Rajeev Tiwari',
             designation: 'Director',
-            about: 'He is an ardent social activist and is selflessly working since last 10 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
+            about: 'He is an ardent social activist and is selflessly working since last 10 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. He is a very hard working, devoted, sincere, passionate and simple Person who has a strong commitment towards supporting the underprivileged women and children in society. His ability to manage diverse activities coupled with his realistic approach and courage has progressed Abhilakh Foundation to incredible heights.'
         },{
             imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
             name: 'XYZ',
             designation: 'President',
-            about: 'He is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. Her ability to manage diverse activities coupled with her realistic approach and courage has progressed Abhilasha Foundation to incredible heights.'
+            about: 'He is an ardent social activist and is selflessly working since last 20 years for underprivileged and orphan children/women and campaigning for the children’s & women rights. She is a very hard working, devoted, sincere, passionate and simple lady who has a strong commitment towards supporting the underprivileged women and children in society. His ability to manage diverse activities coupled with his realistic approach and courage has progressed Abhilakh Foundation to incredible heights.'
         }],
         whoWeAre: [
             'Abhilakh Foundation is a non-profit NGO established under society Registration Act, 1860  and The Uttar Pradesh Public Trust Act. 1950. (Registration No: F-46166).',
