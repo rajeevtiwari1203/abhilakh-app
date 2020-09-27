@@ -75,7 +75,7 @@ router.get('/', async function (req, res, next) {
                     imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222661/RASHAN%20VITRAN/1_ztyz3t.jpg'
                 },
                 {
-                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222658/RASHAN%20VITRAN/5_lixrsy.jpg'
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601226250/RASHAN%20VITRAN/5_j4ksqf.jpg'
                 },
                 {
                     imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222649/RASHAN%20VITRAN/3_kl05dr.jpg'
