@@ -23,7 +23,7 @@ router.get('/', async function (req, res, next) {
             },
             {
                 header: 'PRASHAD DISTRIBUTION.',
-                images: ['https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/2_pc7spa.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/2_pc7spa.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/15_hvbzjc.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/1_qvlmmg.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/11_ysz9vf.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215441/PRASHAD%20VITRAN/13_ozav83.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215440/PRASHAD%20VITRAN/10_ivl3jx.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215438/PRASHAD%20VITRAN/4_kpoawe.jpg']
+                images: ['https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/2_pc7spa.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/15_hvbzjc.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/1_qvlmmg.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/11_ysz9vf.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215441/PRASHAD%20VITRAN/13_ozav83.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215440/PRASHAD%20VITRAN/10_ivl3jx.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215438/PRASHAD%20VITRAN/4_kpoawe.jpg']
             },
         ];
     try {
