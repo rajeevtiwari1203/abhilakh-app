@@ -25,6 +25,14 @@ router.get('/', async function (req, res, next) {
                 header: 'PRASHAD DISTRIBUTION.',
                 images: ['https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/2_pc7spa.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/15_hvbzjc.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/1_qvlmmg.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215442/PRASHAD%20VITRAN/11_ysz9vf.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215441/PRASHAD%20VITRAN/13_ozav83.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215440/PRASHAD%20VITRAN/10_ivl3jx.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601215438/PRASHAD%20VITRAN/4_kpoawe.jpg']
             },
+            {
+                header: 'RASHAN DISTRIBUTION.',
+                images: ['https://res.cloudinary.com/delffrxwf/image/upload/v1601222661/RASHAN%20VITRAN/1_ztyz3t.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222658/RASHAN%20VITRAN/5_lixrsy.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222653/RASHAN%20VITRAN/7_nd2nuf.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222653/RASHAN%20VITRAN/8_xridpr.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222651/RASHAN%20VITRAN/2_xaieup.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222649/RASHAN%20VITRAN/3_kl05dr.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222649/RASHAN%20VITRAN/10_ucou7k.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222648/RASHAN%20VITRAN/9_ip01lr.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222642/RASHAN%20VITRAN/6_jgnura.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222648/RASHAN%20VITRAN/4_wsbwln.jpg']
+            },
+            {
+                header: 'KADHA DISTRIBUTION.',
+                images: ['https://res.cloudinary.com/delffrxwf/image/upload/v1601222595/KADHA%20VITRAN/2_wtlpr0.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222592/KADHA%20VITRAN/9_casizq.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222578/KADHA%20VITRAN/10_npheoj.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222575/KADHA%20VITRAN/4_rzoyyw.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222559/KADHA%20VITRAN/8_gcbrll.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222563/KADHA%20VITRAN/3_ngjpml.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222572/KADHA%20VITRAN/1_eigcca.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222573/KADHA%20VITRAN/7_envnbg.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222554/KADHA%20VITRAN/6_cpoyhx.jpg', 'https://res.cloudinary.com/delffrxwf/image/upload/v1601222556/KADHA%20VITRAN/5_ehmmau.jpg']
+            },
         ];
     try {
         //result = await employeeDb.getCandidateById(+id);
