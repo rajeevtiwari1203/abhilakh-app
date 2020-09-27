@@ -104,62 +104,63 @@ router.get('/', async function (req, res, next) {
             ]
         },
         emergencyCases: {
-            header: 'Emergency Cases',
+            header: 'Covid-19 Relief',
+          subHeader: 'Great support is forthcoming from people who want to help. Indian citizens and organizations desirous of volunteering their services for the Nations fight against spread of Corona ....',
             images: [
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228420/CORONA%20CERTIFICATE/2_ijrtqy.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Anuj',
+                        desease: 'Bank Manager Allahabad Bank Khargupur'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228420/CORONA%20CERTIFICATE/1_sd1um6.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Kulbhushan Ashthana',
+                        desease: 'Sr. Bank Manager Allahabad Bank Khargupur'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228960/CORONA%20CERTIFICATE/3_matd1a.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Dr. Sanddep Shukla',
+                        desease: 'CHC Khargupur'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228960/CORONA%20CERTIFICATE/4_tniuiz.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Rahul Tiwari',
+                        desease: 'Journalist'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228962/CORONA%20CERTIFICATE/5_wts24w.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Santosh Tiwari',
+                        desease: 'SHO Dhanepur'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228960/CORONA%20CERTIFICATE/6_mvvkgk.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Miss Shalu Shukla',
+                        desease: 'Journalist'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228960/CORONA%20CERTIFICATE/7_gqbmhp.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Raj Karan Ayyar',
+                        desease: 'SP Gonda'
                     }
                 },
                 {
-                    imgSrc: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+                    imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601228963/CORONA%20CERTIFICATE/8_c08flj.jpg',
                     shortDetail: {
-                        name: 'Junaid Ahmed',
-                        desease: 'Suffering from Right Proximal Tibial Osteosarcoma (Cancer)'
+                        name: 'Mr. Shiv Shankar Panday',
+                        desease: 'Indian Force'
                     }
                 }
             ]
