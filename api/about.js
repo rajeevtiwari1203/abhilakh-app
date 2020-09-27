@@ -4,7 +4,7 @@ var cloudinary = require('cloudinary').v2;
 
 router.get('/', async function (req, res, next) {
     let result = {
-        mainImage: 'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg',
+        mainImage: 'https://res.cloudinary.com/delffrxwf/image/upload/v1599994601/BANNER_rersa7.jpg',
         founderDetail: [{
             imgSrc: 'https://res.cloudinary.com/delffrxwf/image/upload/v1601202007/Dad_dujuuz.png',
             name: 'Rasik Bihari Tiwari',
